@@ -530,7 +530,7 @@
             "category": "Fonts"
           }
      ],
-     "Color":[
+     "Colors":[
 
         {
             "id": 89,
@@ -1131,7 +1131,7 @@
             "nombre": "Brand Logos Free Download in SVG Vector & PNG File Format"
           }
      ],
-     "Favicon": [
+     "Favicons": [
         {
             "id": 188,
             "nombre": "Favicon.io",
@@ -1175,7 +1175,7 @@
             "category": "Favicons"
           }
      ],
-     "IconFont":[
+     "IconFonts":[
         {
             "id": 195,
             "nombre": "Font Awesome",
