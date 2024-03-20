@@ -1,0 +1,70 @@
+.binance-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 7rem;
+    height: 90%;
+}
+.donate-text{
+    color: rgb(204, 199, 199);
+    font-size: 1.7rem;
+}
+.donate-text-h3{
+    color: white;
+    font-size: .9rem;
+}
+
+.donar-btn{
+    border: 0;
+    padding: .5rem 2rem;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(53, 52, 51);
+}
+.binance{
+    width: 200px;
+   
+}
+
+.content-card-donate{
+    width: 350px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+}
+ .share{
+    width:100%;
+    border-inline: .2rem solid var(--color-purple);
+    backdrop-filter: blur(120px);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+.content-card-donate h2{
+    color: rgb(255, 255, 255);
+    
+}
+.donatecopy{
+    display: flex;
+    color: white;
+    gap: 1rem;
+}
+.donatecopy h2{
+    font-size: .8rem;
+    border-inline: .2rem solid var(--color-purple);
+    backdrop-filter: blur(100px);
+    padding: .7rem 2rem;
+    border-radius: 10px;
+}
+.donatecopy button{
+    border: 0;
+    color: white;
+    transition: all .2s ease;
+    background-color: rgb(52, 53, 53);
+    padding: 0 1rem;
+    border-radius: 10px;
+}
+.donatecopy button:hover{
+    background-color: rgb(77, 78, 78);
+
+}
