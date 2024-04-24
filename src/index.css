@@ -20,82 +20,44 @@ body{
 }
 .content{
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns:  1fr;
     width: 100%;
+    overflow: hidden;
     min-height: 100vh;
-    background-color: rgba(3, 3, 3, 0.4);
+    background-color: rgba(27, 27, 27, 0.3);
     backdrop-filter: blur(20px);
 }
 
 .content-section{
-    
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    
+    position: relative;
+
 }
 
 .content-section-article{
-    overflow: hidden;
     padding: 2rem;
     width: 90%;
-    height: 87%;
     border-radius: 30px;
     background-color: rgb(3, 3, 3,.5);
     backdrop-filter: blur(100px);
 }
-.search-content{
-    display: flex;
-    flex-direction: row;
-}
-.searchContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 86%;
-}
-.searchContent input[type="text"]{
-    border-radius: 20px;
-    background-color: rgb(3, 3, 3,.5);
-    backdrop-filter: blur(100px);
-    border: 0;
-    margin-left: .2rem;
-    color: white;
-    padding: .8rem 3rem;
-}
-.searchContent input[type="text"]:focus{
-    outline: none;
-}
-.searchContent .search{
-    backdrop-filter: none;
-    background-color: transparent;
-}
-.searchContent button{
-padding: 1.2rem;
-height: 20px;
-width: 20px;
-cursor: pointer;
-    border-radius: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
 
-background-color: rgb(3, 3, 3,.5);
-backdrop-filter: blur(100px);
-border: 0;
-height: 30px;
-}
-.searchContent button img{
-    width: 20px;
-}
 .filter{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    margin-block: 1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
     color: white;
+}
+.category{
+    font-size: 2rem;
+    font-weight: bold;
 }
 .menu-resource{
     border-inline: .2rem solid var(--color-purple);
@@ -104,6 +66,10 @@ height: 30px;
     border-radius: 10px;
 }
 .menu-resource ul{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     display: flex;
     gap: 1rem;
@@ -111,97 +77,80 @@ height: 30px;
 
 .menu-resource ul li button{
     border: 0;
-    background-color: transparent;
+    background-color: var(--color-menu);
+    padding: .2rem 1rem ;
+    border-radius: 10px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: .8rem;
     cursor: pointer;
+    transition: all .1s ease;
+
 }
 .menu-resource ul li button:hover{
-    color:rgb(138, 133, 133) ;
+    background-color: #2b084d;
+    color:rgb(255, 255, 255) ;
 }
 .menu ul li:hover{
     background-color: var(--color-purple);
 }
 /* MENUUUU */
-.menu{
-    background-color: rgb(0, 0, 0,.5);
-backdrop-filter: blur(100px);  
-}
-.menu nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding: 2rem;
-}
-.menu nav h2{
-    font-size: 1.1rem;
-}
-.menu nav ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 3.2rem;
-    width: 100%;
-}
-.menu nav ul li{
-    padding: .7rem 1rem;
-    border-radius: 10px;
-    transition:all .1s ease ;
-}
-.menu nav ul li:hover{
-    background-color: var(--color-purple);
-    
-}
-.menu nav ul li a{
-    font-size: .8rem;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-}
+
 .bi{
     color: white;
 }
 
  /* ccarddd */
- .content-card{
-    margin-top: 2rem;
-    display: grid;
+ /* Estilos para las tarjetas de contenido */
+.content-card {
+    padding: 4rem; /* Relleno interno */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede la altura */
+}
+
+/* Estilos para los elementos dentro de la cuadrícula */
+.content-item {
     width: 100%;
-    padding-top: 1rem;
-    height: 440px;
-    gap: 1rem;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 250px));
-    grid-auto-rows: 130px;
-    overflow-y: auto;
+    display: grid; /* Usa una cuadrícula CSS */
+    gap: 1rem; /* Espacio entre los elementos */
+    justify-content: space-between; /* Alineación de los elementos */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 250px)); /* Columnas automáticas con un ancho mínimo y máximo */
+    grid-auto-rows: 140px; /* Altura de las filas automáticas */
     
- }
+}
 
-  
-
-  
-  
-  
-.card-resource{
-    display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(100px);
-    position: relative;
-    background-color: #141413;
-    padding:.6rem 2rem;
-    gap: .2rem;
-    border-left: .2rem solid var(--color-purple);
-    background-color:var(--color-main);
-    border-radius: 10px;
-    font-size:.7rem;
-    
-    height: auto;
+/* Estilos para las tarjetas individuales */
+.card-resource {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Dirección de flexión: columna */
+    backdrop-filter: blur(100px); /* Aplica un efecto de desenfoque al fondo */
+    background-color: var(--color-main); /* Color de fondo */
+    padding: 1rem;
+    gap: .2rem; /* Espacio entre los elementos internos */
+    border-left: .3rem solid var(--color-purple); /* Borde izquierdo */
+    border-radius: 10px; /* Radio de borde */
+    font-size: .7rem; /* Tamaño de fuente */
+    overflow: hidden;
+    position: relative; /* Posición relativa */
+}
+.card-resource img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    transition: .2s ease;
+}
+.card-resource img:hover{
+    transform: scale(1.5);
 }
 .card-resource h2{
-color: rgb(141, 137, 137);
+color: rgb(255, 255, 255);
+background-color: rgb(8, 8, 8, 1);
+border-radius: 10px;
+border-inline: .3rem solid var(--color-purple); /* Borde izquierdo */
+padding: .6rem;
+z-index: 1;
 }
 
 .card-resource h3{
@@ -210,6 +159,7 @@ color: rgb(141, 137, 137);
     color: #ffffff;
 }
 .card-resource h3::after{
+    z-index: 1;
     content: "";
     bottom: 12px;
     left: 29px;
@@ -237,16 +187,24 @@ justify-content: center;
 }
 .link{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
     right:22px;
-    top: 6.1px;
+    bottom: 11px;
     border: 0;
-   background-color: transparent;
     cursor: pointer;
-   font-size: 1.2rem;
-    width: 20px;
+    font-size: 1.2rem;
+    width: 40px;
+    z-index: 1;
+    transition: all .1s ease;
+    background-color: #242421;
 }
 
-
+.link:hover{
+    background-color: var(--color-purple);
+}
 
 /* Estilos para la barra de desplazamiento vertical */
 /* WebKit (Safari, Chrome) */
@@ -278,3 +236,14 @@ justify-content: center;
     border-radius: 5px; /* Radio de borde de la barra de desplazamiento horizontal */
   }
   
+
+  @media screen and (max-width: 768px) {
+
+    /* Estilos para las tarjetas de contenido */
+
+
+/* Estilos para los elementos dentro de la cuadrícula */
+
+}
+
+/* Estilos para las tarjetas individuales */

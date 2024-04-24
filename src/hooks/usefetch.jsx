@@ -6,22 +6,23 @@ const useFetch = (category) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true);
-        fetch(`http://localhost:3000/${category}`)
-            .then(response => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch(`https://rest-api-webresource-dev-xhdp.4.us-1.fl0.io/${category}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
-                return response.json();
-            })
-            .then(data => {
+                const data = await response.json();
                 setTodos(data);
-                setLoading(false);
-            })
-            .catch(error => {
+            } catch (error) {
                 setError(error.message);
+            } finally {
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchData();
     }, [category]);
 
     return {
