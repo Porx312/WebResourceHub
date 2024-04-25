@@ -280,7 +280,7 @@ justify-content: center;
 }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
     /* Estilos para las tarjetas de contenido */
 .content-card{
@@ -318,7 +318,7 @@ justify-content: center;
     display: grid; /* Usa una cuadrícula CSS */
     gap: 1rem; /* Espacio entre los elementos */
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 200px)); /* Columnas automáticas con un ancho mínimo y máximo */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 250px)); /* Columnas automáticas con un ancho mínimo y máximo */
     grid-auto-rows:100px; /* Altura de las filas automáticas */
     
 }
@@ -328,3 +328,16 @@ justify-content: center;
 }
 }
 /* Estilos para las tarjetas individuales */
+
+@media screen and (max-width: 288px) {
+
+    .content-item {
+        width: 100%;
+        display: grid; /* Usa una cuadrícula CSS */
+        gap: 1rem; /* Espacio entre los elementos */
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 250px)); /* Columnas automáticas con un ancho mínimo y máximo */
+        grid-auto-rows:90px; /* Altura de las filas automáticas */
+        
+    }
+}
