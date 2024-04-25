@@ -15,8 +15,9 @@
     box-sizing: border-box;
 }
 body{
-    font-family:"popping", sans-serif;
-   background-image: url("./assets/sea-2052650_1280.jpg");
+    font-family: cursive;
+
+   background-image: url("./assets/full-moon-2055469_1280.jpg");
 }
 .content{
     display: grid;
@@ -42,7 +43,7 @@ body{
     padding: 2rem;
     width: 90%;
     border-radius: 30px;
-    background-color: rgb(3, 3, 3,.5);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(100px);
 }
 
@@ -56,17 +57,16 @@ body{
     color: white;
 }
 .category{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 .menu-resource{
     border-inline: .2rem solid var(--color-purple);
     backdrop-filter: blur(100px);
-    padding: 1rem 3rem;
+    padding: .9rem 2rem;
     border-radius: 10px;
 }
 .menu-resource ul{
-    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,12 +77,15 @@ body{
 
 .menu-resource ul li button{
     border: 0;
-    background-color: var(--color-menu);
-    padding: .2rem 1rem ;
+    
+    font-weight: 500;    
+    font-family: cursive;
+    background-color: #5d05b4;
+    padding: .5rem 1.2rem ;
     border-radius: 10px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: .8rem;
+    font-size: .9rem;
     cursor: pointer;
     transition: all .1s ease;
 
@@ -103,6 +106,7 @@ body{
  /* ccarddd */
  /* Estilos para las tarjetas de contenido */
 .content-card {
+    height: 70vh;
     padding: 4rem; /* Relleno interno */
     overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede la altura */
 }
@@ -240,10 +244,39 @@ justify-content: center;
   @media screen and (max-width: 768px) {
 
     /* Estilos para las tarjetas de contenido */
-
-
+.content-card{
+    height: auto;
+    
+}
+.menu-resource{
+    border-inline: .2rem solid var(--color-purple);
+    backdrop-filter: blur(100px);
+    padding: 1rem 3rem;
+    border-radius: 10px;
+}
+.menu-resource ul{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
 /* Estilos para los elementos dentro de la cuadrícula */
-
+.content-item {
+    width: 100%;
+    display: grid; /* Usa una cuadrícula CSS */
+    gap: 1rem; /* Espacio entre los elementos */
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 350px)); /* Columnas automáticas con un ancho mínimo y máximo */
+    grid-auto-rows:180px; /* Altura de las filas automáticas */
+    
+}
+.content-item img{
+    width: 120%;
+    object-fit: cover;
+}
 }
 
 /* Estilos para las tarjetas individuales */
