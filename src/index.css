@@ -73,6 +73,7 @@ body{
     list-style-type: none;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .menu-resource ul li button{
@@ -279,4 +280,51 @@ justify-content: center;
 }
 }
 
+@media screen and (max-width: 400px) {
+
+    /* Estilos para las tarjetas de contenido */
+.content-card{
+    height: auto;
+    
+}
+.content-section-article{
+    padding: 0;
+    width: 90%;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(100px);
+}
+.menu-resource{
+    border-inline: .2rem solid var(--color-purple);
+    backdrop-filter: blur(100px);
+    padding: 1rem 3rem;
+    border-radius: 10px;
+}
+.menu-resource ul{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.menu-resource ul li button{
+    font-size: .7rem;
+}
+/* Estilos para los elementos dentro de la cuadrícula */
+.content-item {
+    width: 100%;
+    display: grid; /* Usa una cuadrícula CSS */
+    gap: 1rem; /* Espacio entre los elementos */
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 200px)); /* Columnas automáticas con un ancho mínimo y máximo */
+    grid-auto-rows:100px; /* Altura de las filas automáticas */
+    
+}
+.content-item img{
+    width: 120%;
+    object-fit: cover;
+}
+}
 /* Estilos para las tarjetas individuales */
